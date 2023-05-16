@@ -1,0 +1,370 @@
+$primary-color: #fff;
+$secundary-color: #e4e4e4;
+$bg-color1: #d1c1c1;
+$bgContainer: #3f0f07;
+$bgContent: #220a06;
+
+@mixin alves() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes effect {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Roboto Condensed", sans-serif;
+}
+body {
+  background: linear-gradient(236deg, #d1c1c1 25%, #823427 50%, #3f0f07 75%);
+  background-size: 300% 300%;
+  height: 100vh;
+  transition: all 0.3s ease;
+  animation: effect 15s ease infinite;
+  @include alves;
+}
+
+.container {
+  cursor: default;
+  position: relative;
+  @include alves;
+  .welcome-sign-in {
+    background-color: $bg-color1;
+    @include alves;
+    gap: 10px;
+    flex-flow: column;
+    position: absolute;
+    width: 40vw;
+    max-width: 450px;
+    height: 450px;
+    left: 100%;
+    z-index: 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-left: 3px solid $bgContent;
+    border-bottom: 3px solid $bgContent;
+    border-top: 3px solid $bgContent;
+  }
+  .sign-in {
+    background-color: $bgContent;
+    color: $primary-color;
+    @include alves;
+    flex-flow: column;
+    position: absolute;
+    width: 40vw;
+    max-width: 450px;
+    height: 450px;
+    right: 100%;
+    z-index: 1;
+    transition: all 0.3s ease;
+    border-left: 3px solid $secundary-color;
+    border-bottom: 3px solid $secundary-color;
+    border-top: 3px solid $secundary-color;
+    button {
+      background-color: $secundary-color;
+      color: #000;
+    }
+  }
+
+  .sign-in-types,
+  .sign-up-types {
+    display: flex;
+    gap: 30px;
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      filter: drop-shadow(5px 5px 5px #000);
+      &:hover {
+        scale: 1.1;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  .sign-up {
+    background-color: $bgContent;
+    color: $primary-color;
+    @include alves;
+    flex-flow: column;
+    position: absolute;
+    right: 100%;
+    width: 40vw;
+    max-width: 450px;
+    height: 450px;
+    z-index: 0;
+    all: 0;
+    transition: all 0.3s ease;
+    border-right: 3px solid $secundary-color;
+    border-bottom: 3px solid $secundary-color;
+    border-top: 3px solid $secundary-color;
+    button {
+      background-color: $secundary-color;
+      color: #000;
+    }
+  }
+  .subscribe {
+    padding: 5px;
+    background-color: $bg-color1;
+    @include alves;
+    gap: 10px;
+    flex-flow: column;
+    position: absolute;
+    width: 40vw;
+    max-width: 450px;
+    height: 450px;
+    left: 100%;
+    z-index: 1;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-right: 3px solid $bgContent;
+    border-bottom: 3px solid $bgContent;
+    border-top: 3px solid $bgContent;
+  }
+
+  .show-icon,
+  .show-off-icon,
+  .show-icon2,
+  .show-off-icon2 {
+    position: absolute;
+    padding-bottom: 5px;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+    filter: invert(100%) drop-shadow(5px 5px 5px #000);
+    &:hover {
+      scale: 1.05;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .warning-username,
+  .warning-password {
+    display: none;
+    margin-top: 4px;
+    text-align: center;
+    font-size: 0.8em;
+    color: $secundary-color;
+  }
+
+  .animation1 {
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+  }
+
+  .animation2 {
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+  }
+  .animation3 {
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+  }
+  .animation4 {
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+  }
+
+  button {
+    margin-top: 10px;
+    width: 80px;
+    height: 30px;
+    font-size: 1em;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background: $bgContainer;
+    color: $primary-color;
+    font-weight: bold;
+    box-shadow: 3px 3px 3px#000;
+    &:hover {
+      scale: 1.05;
+      transition: all 0.3s ease;
+      filter: brightness(80%);
+    }
+  }
+
+  form {
+    gap: 5px;
+    @include alves;
+    flex-flow: column;
+    label {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+  }
+
+  input {
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 25px;
+    background-color: $secundary-color;
+    padding-inline-start: 5px;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px 3px #000;
+    &:hover {
+      scale: 1.05;
+      transition: all 0.3s ease;
+    }
+    &:focus {
+      background-color: $bg-color1;
+      cursor: text;
+      scale: 1.05;
+      transition: all 0.3s ease;
+    }
+  }
+  .forgot {
+    margin-top: 4px;
+    color: #dc9e9e;
+    &:hover {
+      scale: 1.1;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .container {
+    .welcome-sign-in {
+      gap: 10px;
+      width: 50vw;
+      max-width: 300px;
+      height: 400px;
+      font-size: 0.9em;
+    }
+    .sign-in {
+      width: 50vw;
+      max-width: 300px;
+      height: 400px;
+    }
+    .sign-in-types,
+    .sign-up-types {
+      gap: 25px;
+      a {
+        font-size: 1.3em;
+        margin-bottom: 5px;
+        &:hover {
+          scale: 1.1;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+    .sign-up {
+      width: 50vw;
+      max-width: 300px;
+      height: 400px;
+    }
+    .subscribe {
+      width: 50vw;
+      max-width: 300px;
+      height: 400px;
+      font-size: 0.9em;
+    }
+    .show-icon,
+    .show-off-icon,
+    .show-icon2,
+    .show-off-icon2 {
+      margin-left: -23px;
+      filter: invert(0);
+      width: 20px;
+      &:hover {
+        scale: 1.05;
+      }
+    }
+    form {
+      gap: 5px;
+      label {
+        margin-top: 10px;
+        font-size: 1em;
+      }
+    }
+    input {
+      width: 140px;
+      height: 25px;
+      &::-webkit-input-placeholder {
+        font-size: 10px;
+      }
+    }
+    .warning-username,
+    .warning-password {
+      font-size: 0.6em;
+    }
+    .forgot {
+      font-size: 0.7em;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    .welcome-sign-in {
+      gap: 10px;
+      width: 45vw;
+      max-width: 350px;
+      height: 380px;
+    }
+    .sign-in {
+      width: 45vw;
+      max-width: 350px;
+      height: 380px;
+    }
+    .sign-in-types,
+    .sign-up-types {
+      gap: 25px;
+      a {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+        &:hover {
+          scale: 1.1;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+    .sign-up {
+      width: 45vw;
+      max-width: 350px;
+      height: 380px;
+    }
+    .subscribe {
+      width: 45vw;
+      max-width: 350px;
+      height: 380px;
+    }
+    .show-icon,
+    .show-off-icon,
+    .show-icon2,
+    .show-off-icon2 {
+      margin-left: 5px;
+      &:hover {
+        scale: 1.05;
+      }
+    }
+    input {
+      width: 190px;
+      height: 25px;
+    }
+  }
+}
