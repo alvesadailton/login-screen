@@ -168,6 +168,11 @@ body {
   font-size: 0.8em;
   color: #e4e4e4;
 }
+.container .warning-password {
+  position: absolute;
+  padding: 0 5px;
+  top: 310px;
+}
 .container .animation1 {
   transform: translateX(100%);
   transition: all 0.3s ease;
@@ -184,13 +189,16 @@ body {
   transform: translateX(100%);
   transition: all 0.3s ease;
 }
+.container .create-your-account {
+  margin-top: 45px;
+}
 .container button {
   margin-top: 10px;
   width: 80px;
   height: 30px;
   font-size: 1em;
   border-radius: 30px;
-  border: none;
+  border: 2px solid #3f0f07;
   cursor: pointer;
   background: #3f0f07;
   color: #fff;
@@ -216,7 +224,6 @@ body {
 .container input {
   border-radius: 20px;
   border: none;
-  outline: none;
   width: 200px;
   height: 25px;
   background-color: #e4e4e4;
@@ -226,13 +233,14 @@ body {
   box-shadow: 3px 3px 3px 3px #000;
 }
 .container input:hover {
-  scale: 1.05;
+  scale: 1.02;
   transition: all 0.3s ease;
 }
 .container input:focus {
   background-color: #d1c1c1;
   cursor: text;
-  scale: 1.05;
+  scale: 1.04;
+  outline: 2px solid #3f0f07;
   transition: all 0.3s ease;
 }
 .container .forgot {
@@ -249,13 +257,13 @@ body {
     gap: 10px;
     width: 50vw;
     max-width: 300px;
-    height: 400px;
+    height: 350px;
     font-size: 0.9em;
   }
   .container .sign-in {
     width: 50vw;
     max-width: 300px;
-    height: 400px;
+    height: 350px;
   }
   .container .sign-in-types,
   .container .sign-up-types {
@@ -274,12 +282,12 @@ body {
   .container .sign-up {
     width: 50vw;
     max-width: 300px;
-    height: 400px;
+    height: 350px;
   }
   .container .subscribe {
     width: 50vw;
     max-width: 300px;
-    height: 400px;
+    height: 350px;
     font-size: 0.9em;
   }
   .container .show-icon,
@@ -313,6 +321,13 @@ body {
   .container .warning-username,
   .container .warning-password {
     font-size: 0.6em;
+  }
+  .container .warning-password {
+    position: absolute;
+    top: 240px;
+  }
+  .container .create-your-account {
+    margin-top: 50px;
   }
   .container .forgot {
     font-size: 0.7em;
@@ -369,5 +384,12 @@ body {
   .container input {
     width: 190px;
     height: 25px;
+  }
+  .container .create-your-account {
+    margin-top: 45px;
+  }
+  .container .warning-password {
+    position: absolute;
+    top: 270px;
   }
 }/*# sourceMappingURL=style.css.map */

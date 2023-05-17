@@ -26,11 +26,13 @@
       const el = e.target;
 
       if (el.classList.contains('show-icon')) {
+        passwordSignIn.focus();
         showIcon.setAttribute('class', 'show-off-icon');
         showIcon.src = 'assets/img/showoff.svg';
         showIcon.setAttribute('title', 'Hide');
         passwordSignIn.setAttribute('type', 'text');
       } else if (el.classList.contains('show-off-icon')) {
+        passwordSignIn.focus();
         showIcon.setAttribute('class', 'show-icon');
         showIcon.src = 'assets/img/show.svg';
         showIcon.setAttribute('title', 'Show');
@@ -38,11 +40,13 @@
       }
 
       if (el.classList.contains('show-icon2')) {
+        passwordSignUp.focus();
         showIcon2.setAttribute('class', 'show-off-icon2');
         showIcon2.src = 'assets/img/showoff.svg';
         showIcon2.setAttribute('title', 'Hide');
         passwordSignUp.setAttribute('type', 'text');
       } else if (el.classList.contains('show-off-icon2')) {
+        passwordSignUp.focus();
         showIcon2.setAttribute('class', 'show-icon2');
         showIcon2.src = 'assets/img/show.svg';
         showIcon2.setAttribute('title', 'Show');

@@ -168,6 +168,12 @@ body {
     color: $secundary-color;
   }
 
+  .warning-password {
+    position: absolute;
+    padding: 0 5px;
+    top: 310px;
+  }
+
   .animation1 {
     transform: translateX(100%);
     transition: all 0.3s ease;
@@ -185,6 +191,10 @@ body {
     transform: translateX(100%);
     transition: all 0.3s ease;
   }
+  
+  .create-your-account {
+    margin-top: 45px;
+  }
 
   button {
     margin-top: 10px;
@@ -192,7 +202,7 @@ body {
     height: 30px;
     font-size: 1em;
     border-radius: 30px;
-    border: none;
+    border: 2px solid $bgContainer;
     cursor: pointer;
     background: $bgContainer;
     color: $primary-color;
@@ -218,7 +228,6 @@ body {
   input {
     border-radius: 20px;
     border: none;
-    outline: none;
     width: 200px;
     height: 25px;
     background-color: $secundary-color;
@@ -226,13 +235,14 @@ body {
     cursor: pointer;
     box-shadow: 3px 3px 3px 3px #000;
     &:hover {
-      scale: 1.05;
+      scale: 1.02;
       transition: all 0.3s ease;
     }
     &:focus {
       background-color: $bg-color1;
       cursor: text;
-      scale: 1.05;
+      scale: 1.04;
+      outline: 2px solid $bgContainer;
       transition: all 0.3s ease;
     }
   }
@@ -252,13 +262,13 @@ body {
       gap: 10px;
       width: 50vw;
       max-width: 300px;
-      height: 400px;
+      height: 350px;
       font-size: 0.9em;
     }
     .sign-in {
       width: 50vw;
       max-width: 300px;
-      height: 400px;
+      height: 350px;
     }
     .sign-in-types,
     .sign-up-types {
@@ -275,12 +285,12 @@ body {
     .sign-up {
       width: 50vw;
       max-width: 300px;
-      height: 400px;
+      height: 350px;
     }
     .subscribe {
       width: 50vw;
       max-width: 300px;
-      height: 400px;
+      height: 350px;
       font-size: 0.9em;
     }
     .show-icon,
@@ -311,6 +321,13 @@ body {
     .warning-username,
     .warning-password {
       font-size: 0.6em;
+    }
+    .warning-password {
+      position: absolute;
+      top: 240px;
+    }
+    .create-your-account {
+      margin-top: 50px;
     }
     .forgot {
       font-size: 0.7em;
@@ -365,6 +382,13 @@ body {
     input {
       width: 190px;
       height: 25px;
+    }
+    .create-your-account {
+      margin-top: 45px;
+    }
+    .warning-password {
+      position: absolute;
+      top: 270px;
     }
   }
 }
